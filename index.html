@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123c2d">
+  <meta name="description" content="OUSBY-SHOP : maillots de football à 4 000 FCFA. Vente en gros et au détail au Mali. Commandez depuis Bamako, Dakar et Abidjan.">
+  <title>OUSBY-SHOP | Le football à prix accessible</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    <span>⚽ La passion du football, au meilleur prix</span>
+    <span>4 000 FCFA / maillot</span>
+  </div>
+
+  <header class="header">
+    <a class="brand" href="#accueil" aria-label="OUSBY-SHOP, accueil">
+      <span class="brand-mark">O<span>•</span></span>
+      <span>OUSBY<span class="brand-light">-SHOP</span></span>
+    </a>
+
+    <nav class="nav" id="navigation">
+      <a href="#accueil">Accueil</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#avantages">Nos avantages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="cart-button" href="#boutique">
+      <span>Voir les maillots</span>
+      <span class="cart-count" id="cart-count">0</span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <span class="eyebrow"><span class="status-dot"></span> LA BOUTIQUE DES PASSIONNÉS</span>
+        <h1>Le football.<br>Le style. <span>Le bon prix.</span></h1>
+        <p class="hero-description">
+          Porte les couleurs de ton équipe préférée.
+          Des maillots à prix accessible, en gros comme au détail.
+        </p>
+        <div class="hero-price">
+          <span class="price-label">À partir de</span>
+          <strong>4 000 <small>FCFA</small></strong>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#boutique">Découvrir les maillots <span>↗</span></a>
+          <a class="button button-secondary" href="#contact">Nous contacter</a>
+        </div>
+        <div class="hero-proof">
+          <span>✓ Vente en gros et au détail</span>
+          <span>✓ Commandes par WhatsApp</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Illustration de maillot de football">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-tag">ÉDITION FOOTBALL<br><strong>OUSBY 01</strong></div>
+        <div class="jersey jersey-hero">
+          <div class="jersey-collar"></div>
+          <div class="jersey-sleeve left-sleeve"></div>
+          <div class="jersey-sleeve right-sleeve"></div>
+          <div class="jersey-stripe"></div>
+          <div class="jersey-logo">O</div>
+          <div class="jersey-number">10</div>
+          <div class="jersey-label">OUSBY-SHOP</div>
+        </div>
+        <div class="art-caption">
+          <span class="caption-line"></span>
+          <span>TON ÉQUIPE. TON IDENTITÉ.</span>
+        </div>
+      </div>
+      <div class="hero-bottom">BAMAKO <span>•</span> DAKAR <span>•</span> ABIDJAN</div>
+    </section>
+
+    <section class="benefits" id="avantages">
+      <div class="benefit">
+        <span class="benefit-icon">✦</span>
+        <div><strong>4 000 FCFA</strong><p>Prix annoncé par maillot</p></div>
+      </div>
+      <div class="benefit">
+        <span class="benefit-icon">↗</span>
+        <div><strong>Gros & détail</strong><p>Pour tous les passionnés</p></div>
+      </div>
+      <div class="benefit">
+        <span class="benefit-icon">◎</span>
+        <div><strong>Plusieurs villes</strong><p>Bamako, Dakar et Abidjan</p></div>
+      </div>
+      <div class="benefit">
+        <span class="benefit-icon">✓</span>
+        <div><strong>Commande simple</strong><p>Confirmation sur WhatsApp</p></div>
+      </div>
+    </section>
+
+    <section class="shop section" id="boutique">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">LA COLLECTION</span>
+          <h2>Trouve ton <span>maillot.</span></h2>
+          <p>Choisis ton modèle, ta taille et la quantité souhaitée.</p>
+        </div>
+        <div class="shop-tools">
+          <label class="search-box">
+            <span>⌕</span>
+            <input id="search-input" type="search" placeholder="Rechercher un maillot..." aria-label="Rechercher un maillot">
+          </label>
+          <select id="sort-select" aria-label="Trier les maillots">
+            <option value="default">Tous les modèles</option>
+            <option value="name">Trier par nom</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filter-row" id="filter-row">
+        <button class="filter active" data-filter="all">Tous les maillots</button>
+        <button class="filter" data-filter="club">Clubs</button>
+        <button class="filter" data-filter="selection">Sélections</button>
+        <button class="filter" data-filter="retro">Style rétro</button>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <div class="loading-products">Chargement de la collection...</div>
+      </div>
+
+      <div class="wholesale-banner">
+        <div>
+          <span class="eyebrow">TU ACHÈTES EN QUANTITÉ ?</span>
+          <h3>Le football se partage.</h3>
+          <p>Tu souhaites commander plusieurs maillots ? Prépare ta commande et contacte-nous pour confirmer la disponibilité.</p>
+        </div>
+        <a class="button button-light" href="#commande">Préparer ma commande ↗</a>
+      </div>
+    </section>
+
+    <section class="order-section section" id="commande">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">TON PANIER</span>
+          <h2>Finalise ta <span>commande.</span></h2>
+          <p>Vérifie les quantités et indique les informations nécessaires à la livraison.</p>
+        </div>
+      </div>
+
+      <div class="checkout-layout">
+        <div class="panel cart-panel">
+          <div class="panel-heading">
+            <h3>Ma sélection</h3>
+            <span class="item-counter" id="item-counter">0 article</span>
+          </div>
+          <div id="cart-items" class="cart-items">
+            <div class="empty-cart">
+              <span class="empty-icon">🛍</span>
+              <strong>Ton panier est vide</strong>
+              <p>Choisis un maillot dans la boutique pour commencer.</p>
+              <a href="#boutique" class="text-link">Voir les maillots ↗</a>
+            </div>
+          </div>
+          <div class="cart-total">
+            <span>Total des articles</span>
+            <strong id="cart-total">0 FCFA</strong>
+          </div>
+          <p class="small-note">Les frais de livraison, s'il y en a, seront confirmés par le vendeur.</p>
+        </div>
+
+        <form class="panel order-form" id="order-form">
+          <div class="panel-heading">
+            <h3>Informations de livraison</h3>
+            <span class="secure-label">Commande</span>
+          </div>
+
+          <label for="customer-name">Nom complet *</label>
+          <input id="customer-name" name="name" type="text" placeholder="Ton nom et prénom" required maxlength="80">
+
+          <label for="customer-phone">Numéro de téléphone *</label>
+          <input id="customer-phone" name="phone" type="tel" placeholder="+223 ..." required maxlength="25">
+
+          <div class="form-row">
+            <div>
+              <label for="customer-city">Ville *</label>
+              <select id="customer-city" name="city" required>
+                <option value="">Choisir une ville</option>
+                <option value="Bamako">Bamako</option>
+                <option value="Dakar">Dakar</option>
+                <option value="Abidjan">Abidjan</option>
+                <option value="Autre ville">Autre ville</option>
+              </select>
+            </div>
+            <div>
+              <label for="customer-size">Taille habituelle</label>
+              <select id="customer-size" name="size">
+                <option value="À préciser">À préciser</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="payment-method">Mode de paiement souhaité *</label>
+          <select id="payment-method" name="payment" required>
+            <option value="">Choisir un mode de paiement</option>
+            <option value="Orange Money">Orange Money</option>
+            <option value="Moov Money">Moov Money</option>
+            <option value="À convenir avec le vendeur">À convenir avec le vendeur</option>
+          </select>
+          <p class="payment-hint">Ne paie rien avant d'avoir confirmé la commande et les coordonnées de paiement avec le vendeur.</p>
+
+          <label for="order-note">Précisions (facultatif)</label>
+          <textarea id="order-note" name="note" rows="3" maxlength="500" placeholder="Modèle, tailles différentes, point de livraison..."></textarea>
+
+          <button class="button button-primary submit-order" type="submit">
+            Envoyer ma commande sur WhatsApp <span>↗</span>
+          </button>
+          <p class="form-footnote">Ta commande sera envoyée au vendeur pour confirmation. Le paiement n'est pas automatique.</p>
+          <p id="form-message" class="form-message" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="delivery-section">
+      <div class="delivery-copy">
+        <span class="eyebrow">NOTRE RÉSEAU</span>
+        <h2>Les couleurs voyagent.<br><span>La passion aussi.</span></h2>
+        <p>Nous prenons les commandes pour Bamako, Dakar et Abidjan. Le vendeur confirmera la disponibilité, les délais et les modalités de livraison avant le paiement.</p>
+      </div>
+      <div class="route-card">
+        <div class="route-stop"><span class="route-dot"></span><div><strong>Dakar</strong><small>Sénégal</small></div></div>
+        <div class="route-line"></div>
+        <div class="route-stop"><span class="route-dot"></span><div><strong>Bamako</strong><small>Mali</small></div></div>
+        <div class="route-line"></div>
+        <div class="route-stop"><span class="route-dot"></span><div><strong>Abidjan</strong><small>Côte d’Ivoire</small></div></div>
+        <div class="route-note">Départs annoncés chaque semaine — confirmation nécessaire auprès du vendeur.</div>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contact">
+      <div>
+        <span class="eyebrow">UNE QUESTION ?</span>
+        <h2>Parlons <span>football.</span></h2>
+        <p>Besoin d'un renseignement sur un modèle, le stock ou une commande en gros ? Écris-nous directement.</p>
+      </div>
+      <a class="button button-primary" href="https://wa.me/22398007149" target="_blank" rel="noopener noreferrer">Contacter OUSBY-SHOP ↗</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#accueil"><span class="brand-mark">O<span>•</span></span><span>OUSBY<span class="brand-light">-SHOP</span></span></a>
+    <p>La passion du football, au meilleur prix.</p>
+    <div class="footer-bottom">
+      <span>© <span id="current-year"></span> OUSBY-SHOP</span>
+      <span>Gros & détail · 4 000 FCFA / maillot</span>
+    </div>
+  </footer>
+</body>
+</html>
